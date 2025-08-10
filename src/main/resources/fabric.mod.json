@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "packbar",
+  "version": "${version}",
+  "name": "PackBar",
+  "description": "Adds search bar to the ResourcePack list.",
+  "authors": [ "cattyn" ],
+  "contact": {
+    "sources": "http://github.com/cattyngmd/PackBar",
+    "issues": "http://github.com/cattyngmd/PackBar/issues"
+  },
+  "license": "MIT",
+  "icon": "assets/packbar/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "dev.cattyn.packbar.Packbar"
+    ],
+    "modmenu": [
+      "dev.cattyn.packbar.config.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "packbar.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}

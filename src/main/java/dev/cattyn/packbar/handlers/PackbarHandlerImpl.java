@@ -10,6 +10,7 @@ import net.minecraft.client.gui.widget.Widget;
 import org.lwjgl.glfw.GLFW;
 
 import static dev.cattyn.packbar.Utils.normalize;
+import static dev.cattyn.packbar.Utils.removePackPrefix;
 
 public class PackbarHandlerImpl implements PackHandler {
     private static final int SEARCH_BAR_HEIGHT = 16;
@@ -80,6 +81,7 @@ public class PackbarHandlerImpl implements PackHandler {
         if (input.isEmpty()) return "Search";
         for (PackListWidget.ResourcePackEntry entry : packList.children()) {
             String packName = normalize(entry.getName());
+            packName = removePackPrefix(packName);
             String remaining = Utils.getRemaining(input, packName);
             if (remaining != null)
                 return remaining;

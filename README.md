@@ -6,5 +6,5 @@
 
 </div>
 
-## Screenshots
-![Screenshot](images/screenshot.png)
+## Preview
+![Preview](images/preview.gif)

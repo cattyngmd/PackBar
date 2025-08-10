@@ -8,6 +8,7 @@ import org.lwjgl.glfw.GLFW;
 import java.util.Locale;
 
 public final class Utils {
+    public static final String PACK_PREFIX = "file/";
     private static final MinecraftClient mc = MinecraftClient.getInstance();
 
     private Utils() {
@@ -26,8 +27,13 @@ public final class Utils {
         return GLFW.glfwGetKey(mc.getWindow().getHandle(), key) == 1;
     }
 
-    public static String normalize(String string) {
-        return string.toLowerCase(Locale.ROOT).trim();
+    public static String normalize(String input) {
+        return input.toLowerCase(Locale.ROOT).trim();
+    }
+
+    public static String removePackPrefix(String input) {
+        if (input.startsWith(PACK_PREFIX)) return input.substring(PACK_PREFIX.length());
+        return input;
     }
 
     public static String getRemaining(String input, String entry) {

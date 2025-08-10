@@ -2,7 +2,8 @@
 <h1>PackBar</h1> 
 <p> Adds search bar to the ResourcePack list. </p>
 
-![PackBarIcon](images/icon.png)
+<img src="images/icon.png" width="250"/>
+
 </div>
 
 ## Screenshots
